@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)\libs\glad\include\KHR;$(ProjectDir)\libs\glad\include\glad;$(ProjectDir)\libs\GLFW\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\libs\glad\include\KHR;$(ProjectDir)\libs\glad\include\glad;$(ProjectDir)\libs\GLFW\include;$(ProjectDir)\libs\glm\glm;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\libs\GLFW\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -123,6 +123,16 @@
   <ItemGroup>
     <ClCompile Include="libs\glad\src\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precompile.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleFrag.fs" />
+    <None Include="SimpleVer.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
