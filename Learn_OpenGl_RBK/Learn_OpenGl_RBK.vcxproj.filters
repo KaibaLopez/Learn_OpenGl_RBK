@@ -41,6 +41,9 @@
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleFrag.fs">
@@ -48,6 +51,12 @@
     </None>
     <None Include="SimpleVer.vs">
       <Filter>Resource Files\VerShaders</Filter>
+    </None>
+    <None Include="camera.vs">
+      <Filter>Resource Files\VerShaders</Filter>
+    </None>
+    <None Include="camera.fs">
+      <Filter>Resource Files\FragShaders</Filter>
     </None>
   </ItemGroup>
 </Project>
