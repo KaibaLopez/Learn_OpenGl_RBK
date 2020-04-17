@@ -9,18 +9,19 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     name: "Close stale issues"
-uses: aws-actions/stale-issue-cleanup@v1
-with:
-    stale-issue-message: Stale issue message
-    stale-pr-message: Stale issue message
-    stale-issue-label: closing-soon
-    exempt-issue-label: awaiting-approval
-    stale-pr-label: no-pr-activity
-    exempt-pr-label: awaiting-approval
-    response-requested-label: response-requested
-    days-before-stale: 0,
-    days-before-close: 0,
-    repo-token: ${{ secrets.GITHUB_TOKEN }}
-    loglevel: DEBUG
-    # Set dry-run to true to not perform label or close actions.
-    dry-run: true
+    steps:
+      - uses: aws-actions/stale-issue-cleanup@v1
+        with:
+          stale-issue-message: Stale issue message
+          stale-pr-message: Stale issue message
+          stale-issue-label: closing-soon
+          exempt-issue-label: awaiting-approval
+          stale-pr-label: no-pr-activity
+          exempt-pr-label: awaiting-approval
+          response-requested-label: response-requested
+          days-before-stale: 0,
+          days-before-close: 0,
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          loglevel: DEBUG
+          # Set dry-run to true to not perform label or close actions.
+          dry-run: true
